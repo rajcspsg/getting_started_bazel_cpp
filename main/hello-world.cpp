@@ -1,14 +1,9 @@
-#include "hello-greet.h"
+#include "main/hello-greet.h"
+#include "lib/hello-time.h"
 #include <ctime>
 #include <iostream>
 #include <string>
 using namespace std;
-
-void print_localtime() {
-    std::time_t result = std::time(nullptr);
-    cout<< std::asctime(std::localtime(&result));
-}
-
 int main(int argc, char *argv[]) {
     std::string  who = "world";
     if(argc > 1) {
